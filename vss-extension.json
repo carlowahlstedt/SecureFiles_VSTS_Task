@@ -1,13 +1,13 @@
 {
   "manifestVersion": 1,
   "id": "SecureFiles",
-  "version": "0.1.1",
+  "version": "0.1.8",
   "name": "Secure Files",
   "scopes": [],
   "description": "Allows you to download the secure files stored in the library",
   "publisher": "carlowahlstedt",
   "galleryFlags": [
-    "Preview"
+    "Public"
   ],
   "icons": {
     "default": "static/images/logo.png"
@@ -21,22 +21,19 @@
     "api-version/3.0"
   ],
   "tags": [
-    "Sample"
+    "Secure",
+    "Files",
+    "Copy"
   ],
   "categories": [
     "Build and release"
-  ],
-  "screenshots": [
-    {
-      "path": "static/images/screen1.png"
-    }
   ],
   "content": {
     "license": {
       "path": "license.md"
     },
     "details": {
-      "path": "overview.md"
+      "path": "readme.md"
     }
   },
   "links": {
@@ -55,8 +52,7 @@
     "uri": "https://bit.ly"
   },
   "branding": {
-    "color": "rgb(220, 235, 252)",
-    "theme": "light"
+    "color": "rgb(241, 92, 34)"
   },
   "files": [
     {
