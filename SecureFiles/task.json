@@ -1,37 +1,44 @@
 {
-   "id": "9ee4f45c-e508-4707-8232-7e715f83010f",
-   "name": "SecureFiles",
-   "friendlyName": "Secure Files",
-   "description": "Allows you to download the secure files stored in the library",
-   "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
-   "category": "Utility",
-   "visibility": ["Build","Release"],
-   "author": "",
-   "version": {
-      "Major": 1,
-      "Minor": 0,
-      "Patch": 0
-   },
-   "demands": [],
-   "inputs": [
-      {
-         "name": "variable1",
-         "type": "filePath",
-         "label": "Path to Solution File",
-         "defaultValue": "",
-         "required": true
-      },
-      {
-         "name": "variable2",
-         "type": "string",
-         "label": "Sample text variable",
-         "defaultValue": "",
-         "required": false,
-         "helpMarkDown": "This will give you a hover-over tooltip"
-      }
-   ],
-   "instanceNameFormat": "SecureFiles",
-   "execution":
-    {"Node":{"target":"SecureFiles.js"}}
-   
+    "id": "9ee4f45c-e508-4707-8232-7e715f83010f",
+    "name": "SecureFiles",
+    "friendlyName": "Secure Files",
+    "description": "Allows you to download the secure files stored in the library",
+    "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
+    "category": "Utility",
+    "visibility": [
+        "Build",
+        "Release"
+    ],
+    "minimumAgentVersion": "2.116.0",
+    "instanceNameFormat": "Download Secure File",
+    "author": "Carlo Wahlstedt",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 5
+    },
+    "demands": [],
+    "inputs": [
+        {
+            "name": "secureFileName",
+            "type": "secureFile",
+            "label": "Provisioning Profile",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "Select the `Secure File` to copy to the Output Directory."
+        },
+        {
+            "name": "outputDirectory",
+            "type": "string",
+            "label": "Output Directory",
+            "defaultValue": "$(System.DefaultWorkingDirectory)",
+            "required": true,
+            "helpMarkDown": "The directory to output the secure file to."
+        }
+    ],
+    "prejobexecution": {
+        "Node": {
+            "target": "PreInstallSecureFiles.js"
+        }
+    }
 }
