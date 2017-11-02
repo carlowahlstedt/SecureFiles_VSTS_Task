@@ -1,7 +1,7 @@
 {
   "manifestVersion": 1,
   "id": "SecureFiles",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "name": "Secure Files",
   "scopes": [],
   "description": "Allows you to download the secure files stored in the library",
@@ -38,18 +38,18 @@
   },
   "links": {
     "getstarted": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/carlowahlstedt/SecureFiles_VSTS_Task/"
     },
     "support": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/carlowahlstedt/SecureFiles_VSTS_Task/issues"
     },
     "issues": {
-      "uri": "https://bit.ly"
+      "uri": "https://github.com/carlowahlstedt/SecureFiles_VSTS_Task/issues"
     }
   },
   "repository": {
     "type": "git",
-    "uri": "https://bit.ly"
+    "uri": "https://github.com/carlowahlstedt/SecureFiles_VSTS_Task/"
   },
   "branding": {
     "color": "rgb(241, 92, 34)"

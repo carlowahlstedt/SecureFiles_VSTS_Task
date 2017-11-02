@@ -30,14 +30,14 @@ function run() {
 }
 function downloadSecureFile(secureFileId) {
     return __awaiter(this, void 0, void 0, function* () {
+        let tempDownloadPath = getSecureFileTempDownloadPath(secureFileId);
+        tl.debug('Downloading secure file contents to: ' + tempDownloadPath);
+        let file = fs.createWriteStream(tempDownloadPath);
         let serverUrl = tl.getVariable('System.TeamFoundationCollectionUri');
         let serverCreds = tl.getEndpointAuthorizationParameter('SYSTEMVSSCONNECTION', 'ACCESSTOKEN', false);
         let authHandler = vsts.getPersonalAccessTokenHandler(serverCreds);
         let serverConnection = new vsts.WebApi(serverUrl, authHandler);
-        let tempDownloadPath = getSecureFileTempDownloadPath(secureFileId);
-        tl.debug('Downloading secure file contents to: ' + tempDownloadPath);
-        let file = fs.createWriteStream(tempDownloadPath);
-        let stream = (yield this.serverConnection.getTaskAgentApi().downloadSecureFile(tl.getVariable('SYSTEM.TEAMPROJECT'), secureFileId, tl.getSecureFileTicket(secureFileId), false)).pipe(file);
+        let stream = (yield serverConnection.getTaskAgentApi().downloadSecureFile(tl.getVariable('SYSTEM.TEAMPROJECT'), secureFileId, tl.getSecureFileTicket(secureFileId), false)).pipe(file);
         let defer = Q.defer();
         stream.on('finish', () => {
             defer.resolve();

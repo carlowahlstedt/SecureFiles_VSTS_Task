@@ -3,7 +3,7 @@
     "name": "SecureFiles",
     "friendlyName": "Secure Files",
     "description": "Allows you to download the secure files stored in the library",
-    "helpMarkDown": "[More Information](https://url.to/yourmarkdown)",
+    "helpMarkDown": "[More Information](https://github.com/carlowahlstedt/SecureFiles_VSTS_Task/blob/master/readme.md)",
     "category": "Utility",
     "visibility": [
         "Build",
@@ -15,7 +15,7 @@
     "version": {
         "Major": 1,
         "Minor": 0,
-        "Patch": 5
+        "Patch": 9
     },
     "demands": [],
     "inputs": [
