@@ -1,32 +1,5 @@
 ## Secure Files ##
 
-Allows you to download the secure files stored in the library
+NOTE this task has been removed from the marketplace. Microsoft now supplies a way to do this (and does it better) and thus this task is no longer needed.
 
-### Quick steps to get started ###
-
-![](/static/images/Screen1.png)
-
-//TODO:Add a walk-through of key features to your extension. See [Roll-up Board](https://marketplace.visualstudio.com/items?itemName=ms-devlabs.RollUpBoard) for an example.
-
-### Known issue(s)
-
-- None
-
-### Learn More
-
-The [source](//TODO:Point to your repo or remove this) to this extension is available. Feel free to take, fork, and extend.
-
-//TODO:Update the 3rd party notices file or remove the view notices reference.
-[View Notices](https://marketplace.visualstudio.com/_apis/public/gallery/publisher/carlowahlstedt/extension/SecureFiles/latest/assetbyname/ThirdPartyNotices.txt) for third party software included in this extension.
-
-### Minimum supported environments ###
-
-- Visual Studio Team Services
-
-### Contributors ###
-
-We thank the following contributor(s) for this extension: @TODO@-Add and credit contributors.
-
-### Feedback ###
-- Add a review below.
-- Send us an [email](mailto://TODO:Add your email address).
+Please [see their documentation](https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/utility/download-secure-file?view=azure-devops) for more information.
